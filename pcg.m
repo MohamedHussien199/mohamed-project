@@ -7,7 +7,7 @@ zprev=L\rprev; %preconditioned initial residual.
 dprev=L'\zprev; % preconditioned initial direction.
 for k=1:maxiter
     % stopping criteria.
-    if (norm(dprev,2))^2<tol
+    if norm(dprev,2)<tol
        x=xprev;
         numiter=k;
         break
